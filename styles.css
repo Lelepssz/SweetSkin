@@ -1,0 +1,122 @@
+body {
+    background-color: #fdd6e0;
+    font-family: 'Onest', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    height: auto;
+    
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 100px;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 40px;
+}
+
+h1 {
+    padding-top: 30px;
+    color: #de6262;
+}
+
+.username {
+    padding-top: 40px;
+}
+
+input {
+    border: 1px solid #bababa;
+    border-radius: 40px;
+    width: 300px;
+    height: 30px;
+    font-family: 'Onest', sans-serif;
+    padding-left: 10px;
+}
+
+button {
+    width: 200px;
+    height: 30px;
+    border-radius: 40px;
+    margin-bottom: 15px;
+    background-color: #ed9f93;
+    border: 2px solid #ec8d7e;
+    font-size: 15px;
+    color: #fff;
+}
+
+.custom-checkbox-input {
+    display: none;
+}
+
+.custom-checkbox-label:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid #ed9f93;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+/* Estilizar a aparência do checkbox quando ele está marcado */
+.custom-checkbox-input:checked + .custom-checkbox-label:before {
+    background-color: #ed9f93; /* Altere a cor de fundo quando marcado */
+    border-color: #ed9f93; /* Altere a cor da borda quando marcado */
+}
+
+
+a {
+    float: right;
+    margin-top: 50px;
+    color: #ed9f93;
+}
+
+label {
+    color: #5b5b5b;
+}
+
+/* Estilize a caixa de seleção padrão (hidden) */
+input[type="checkbox"] {
+    display: none; /* Esconda a caixa de seleção padrão */
+}
+
+/* Estilize o rótulo que substituirá a caixa de seleção */
+label.checkbox-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px; /* Espaço para o rótulo */
+}
+
+/* Estilize o indicador da caixa de seleção (normalmente um pseudo-elemento) */
+label.checkbox-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px; /* Largura do indicador */
+    height: 20px; /* Altura do indicador */
+    border: 2px solid #333; /* Cor da borda */
+    background-color: #fff; /* Cor de fundo (não marcada) */
+    transition: transform 0.2s ease; /* Transição para animação */
+}
+
+/* Quando a caixa de seleção está marcada, altere a cor de fundo do indicador */
+input[type="checkbox"]:checked + label.checkbox-label::before {
+    background-color: #00b300; /* Cor de fundo (marcada) */
+    border-color: #00b300; /* Cor da borda (marcada) */
+    transform: scale(1.1); /* Efeito de escala */
+}
+
+/* Estilize o indicador da caixa de seleção no hover */
+label.checkbox-label:hover::before {
+    transform: scale(1.2); /* Efeito de escala no hover */
+}
